@@ -15,7 +15,7 @@ RSpec.resource 'Ratings' do
 
     let(:post_id) { post.id }
     let(:user_id) { post.user_id }
-    let(:vote) { 'true' }
+    let(:vote) { true }
 
     let(:raw_post) { params.to_json }
 
