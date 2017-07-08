@@ -65,7 +65,6 @@
         1,
         1,
         1,
-        null,
         1,
         null,
         1,
@@ -132,11 +131,23 @@
         null,
         null
       ],
-      "/media/hdd/Ruby/241/httplab/app/controllers/api/v1/user_token_controller.rb": [
+      "/media/hdd/Ruby/241/httplab/app/controllers/api/v1/ratings_controller.rb": [
         1,
         1,
         1,
         null,
+        null,
+        null
+      ],
+      "/media/hdd/Ruby/241/httplab/app/policies/rating_policy.rb": [
+        1,
+        null,
+        1,
+        1,
+        null,
+        null,
+        1,
+        1,
         null,
         null
       ],
@@ -173,23 +184,11 @@
         null,
         null
       ],
-      "/media/hdd/Ruby/241/httplab/app/controllers/api/v1/ratings_controller.rb": [
+      "/media/hdd/Ruby/241/httplab/app/controllers/api/v1/user_token_controller.rb": [
         1,
         1,
         1,
         null,
-        null,
-        null
-      ],
-      "/media/hdd/Ruby/241/httplab/app/policies/rating_policy.rb": [
-        1,
-        null,
-        1,
-        1,
-        null,
-        null,
-        1,
-        1,
         null,
         null
       ],
@@ -204,6 +203,16 @@
         0
       ],
       "/media/hdd/Ruby/241/httplab/app/policies/user_policy.rb": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
         0,
         0,
         0,
@@ -229,10 +238,9 @@
         0,
         0,
         0,
-        0,
         0
       ]
     },
-    "timestamp": 1499521019
+    "timestamp": 1499521781
   }
 }
