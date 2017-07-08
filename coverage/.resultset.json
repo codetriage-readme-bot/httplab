@@ -131,6 +131,14 @@
         null,
         null
       ],
+      "/media/hdd/Ruby/241/httplab/app/controllers/api/v1/user_token_controller.rb": [
+        1,
+        1,
+        1,
+        null,
+        null,
+        null
+      ],
       "/media/hdd/Ruby/241/httplab/app/controllers/api/v1/ratings_controller.rb": [
         1,
         1,
@@ -184,14 +192,6 @@
         null,
         null
       ],
-      "/media/hdd/Ruby/241/httplab/app/controllers/api/v1/user_token_controller.rb": [
-        1,
-        1,
-        1,
-        null,
-        null,
-        null
-      ],
       "/media/hdd/Ruby/241/httplab/app/jobs/application_job.rb": [
         0,
         0
@@ -203,16 +203,6 @@
         0
       ],
       "/media/hdd/Ruby/241/httplab/app/policies/user_policy.rb": [
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
-        0,
         0,
         0,
         0,
@@ -241,6 +231,6 @@
         0
       ]
     },
-    "timestamp": 1499521781
+    "timestamp": 1499522869
   }
 }
