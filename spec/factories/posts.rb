@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :post do
-    user_id 1
-    message 'MyText'
+    association :user, factory: :user
+    message Faker::Hacker.say_something_smart
   end
 end
