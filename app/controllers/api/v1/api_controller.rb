@@ -1,10 +1,15 @@
 module API
   module V1
-    class ApiController < MainController
-      def index
-        authorize(resource_model)
-        resources = policy_scope(resource_model)
-        render json: resources
+    class ApiController < ApplicationController
+      include Knock::Authenticable
+      undef_method :current_user
+      protect_from_forgery with: :null_session
+
+      before_action :destroy_session
+      before_action :authenticate_user
+
+      def destroy_session
+        request.session_options[:skip] = true
       end
 
       def create

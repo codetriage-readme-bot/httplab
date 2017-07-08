@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 # gem 'redis', '~> 3.0'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt-ruby'
 # Authentication engine
 gem 'devise', '~> 4.3.0'
 # Use Capistrano for deployment
@@ -38,6 +39,8 @@ gem 'devise', '~> 4.3.0'
 # Slim for templates
 gem 'slim', '~> 3.0.7'
 gem 'slim-rails', '~> 3.1.0'
+# Authorization policies
+gem 'pundit', '~> 1.1.0'
 # API authentication
 gem 'jwt', '~> 1.5.6'
 gem 'knock', '~> 2.1.1'
