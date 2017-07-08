@@ -2,7 +2,6 @@ module API
   module V1
     class ApiController < ApplicationController
       include Knock::Authenticable
-      #undef_method :current_user
       protect_from_forgery with: :null_session
 
       before_action :destroy_session
@@ -20,10 +19,6 @@ module API
 
       def resource_model
         request.path.split('/')[3].classify.constantize
-      end
-
-      def resource_by_id
-        @resource ||= resource_model.find_by_id(params[:id])
       end
 
       def resource_params(resource)

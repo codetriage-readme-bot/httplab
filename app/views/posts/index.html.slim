@@ -1,1 +1,12 @@
-= @posts
+h1 Top5 Users by posts
+- @top_posts_users.each do |user|
+  .row
+    = user.email
+h2 Top5 Users by rating of posts
+- @top_rating_users.each do |user|
+  .row
+    = user.email
+  - user.posts.each do |post|
+    .col-6
+      = post.message
+      hr

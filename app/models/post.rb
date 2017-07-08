@@ -4,8 +4,7 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :ratings
 
-  after_create do
+  before_create do
     user.increment(:posts_count, 1)
-    user.save
   end
 end
