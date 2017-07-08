@@ -53,6 +53,8 @@ group :development, :test do
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.13'
   gem 'selenium-webdriver'
+  # Screenshot all failures
+  gem 'capybara-screenshot', '~> 1.0.14'
   # Fake values generator
   gem 'faker', '~> 1.7.3'
   # Pretty printed test output
