@@ -1,5 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { is_expected.to validate_presence_of :message }
+
+  it { expect(build(:post, message: Faker::Lorem.characters(141))).not_to be_valid }
 end

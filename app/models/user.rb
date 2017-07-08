@@ -7,17 +7,8 @@ class User < ApplicationRecord
   # https://davidcel.is/posts/stop-validating-email-addresses-with-regex/
   validates_format_of :email, with: /.*@.*/
 
-  validates_presence_of :password, if: :password_required?
-  validate :password_match?, if: :password_required?
-
-  def password_required?
-    # Password is required if it is being set, but not for new records
-    if persisted?
-      !password.nil? || !password_confirmation.nil?
-    else
-      true
-    end
-  end
+  validates_presence_of :password
+  validate :password_match?
 
   def password_match?
     self.errors[:password] << 'cannot be blank' if password.blank?
