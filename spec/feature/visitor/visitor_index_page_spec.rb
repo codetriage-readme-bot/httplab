@@ -28,9 +28,10 @@ RSpec.feature feature do
   HEREDOC
 
   scenario scenario do
-    top_rating = User.all.order('vote_rating DESC').limit(5)
+    top_message_rating = Post.all.order('message_rating DESC').limit(5)
 
-    expect(page).to have_content(top_rating.first.email)
+    expect(page).to have_content(top_message_rating.first.user.email)
+    expect(page).to have_content(top_message_rating.first.message)
   end
 
   scenario = <<~HEREDOC

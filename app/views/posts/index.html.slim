@@ -3,14 +3,14 @@ h1 Top5 Users by posts
   .row
     = user.email
 h2 Top5 Users by rating of posts
-- @top_rating.each do |user|
+- @top_message_rating.each do |post|
   .row
-    = user.email
-  - user.posts.each do |post|
-    .col-6
-      = post.message
+    = post.user.email
+    br
+    = post.message
       hr
 h3 Top5 Users with the highest average rating of their messages.
 - @top_middle_rating.each do |user|
   .row
     = user.email
+    hr

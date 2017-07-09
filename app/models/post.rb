@@ -4,6 +4,12 @@ class Post < ApplicationRecord
   belongs_to :user
   has_many :ratings
 
+  after_initialize :init
+
+  def init
+    self.message_rating ||= 0
+  end
+
   before_create do
     user.increment(:posts_count, 1).save
   end
