@@ -6,11 +6,17 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :ratings
+  after_initialize :init
+
+  def init
+    self.vote_rating  ||= 0
+    self.posts_count ||= 0
+  end
 
   # https://davidcel.is/posts/stop-validating-email-addresses-with-regex/
   validates_format_of :email, with: /.*@.*/
-  validates_presence_of :password
-  validate :password_match?
+  validates_presence_of :password, if: :password_required?
+  validate :password_match?, if: :password_required?
   alias_method :authenticate, :valid_password?
 
   def password_match?
@@ -20,7 +26,25 @@ class User < ApplicationRecord
     password.present? && password == password_confirmation
   end
 
+  def password_required?
+    # Password is required if it is being set, but not for new records
+    if persisted?
+      !password.nil? || !password_confirmation.nil?
+    else
+      true
+    end
+  end
+
   def api_token
     Knock::AuthToken.new(payload: { sub: id }).token
+  end
+
+  def middle_rating
+    begin
+      vote_rating / posts_count
+    rescue ZeroDivisionError
+      puts 'User has no posts'
+      0
+    end
   end
 end

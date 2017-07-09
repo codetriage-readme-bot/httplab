@@ -5,6 +5,6 @@ class RatingPolicy < ApplicationPolicy
   end
 
   def permitted_attributes
-    [:user_id, :post_id, :vote]
+    [:post_id, :vote]
   end
 end

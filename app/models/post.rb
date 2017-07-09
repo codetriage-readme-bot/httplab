@@ -5,6 +5,6 @@ class Post < ApplicationRecord
   has_many :ratings
 
   before_create do
-    user.increment(:posts_count, 1)
+    user.increment(:posts_count, 1).save
   end
 end

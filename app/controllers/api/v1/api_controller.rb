@@ -26,6 +26,7 @@ module API
       end
 
       def save_attributes_with_status(resource, status)
+        resource.user_id = current_user.id
         resource.assign_attributes(resource_params(resource))
         authorize(resource)
 

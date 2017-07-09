@@ -32,6 +32,7 @@ ActiveRecord::Migration.maintain_test_schema!
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
+  config.include Capybara::DSL
   config.include FactoryGirl::Syntax::Methods
   config.include Devise::Test::ControllerHelpers, type: :view
   config.include(Shoulda::Matchers::ActiveModel, type: :model)
@@ -71,14 +72,18 @@ Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
 
+Capybara.app_host = 'http://localhost:5050'
+Capybara.server_host = 'localhost'
+Capybara.server_port = '5050'
+
+Capybara.default_wait_time = 5
+#Capybara.default_driver = :chrome
+Capybara.javascript_driver = :chrome
+
 Capybara::Screenshot.register_driver(:chrome) do |driver, path|
   driver.browser.save_screenshot(path)
 end
 
-Capybara.default_wait_time = 5
-Capybara.default_driver = :chrome
-Capybara.javascript_driver = :chrome
-Capybara.app_host = 'http://localhost:3000'
 Capybara::Screenshot.append_timestamp = true
 Capybara.save_path = 'tmp/capybara'
 Capybara::Screenshot.prune_strategy = :keep_last_run

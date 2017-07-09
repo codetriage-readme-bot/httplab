@@ -36,6 +36,7 @@ RSpec.describe API::V1::ResourcesController do
     m.verbose = false
     m.create_table :resources do |t|
       t.string :content
+      t.string :user_id
     end
   end
 

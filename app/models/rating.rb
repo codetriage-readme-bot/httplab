@@ -3,6 +3,10 @@ class Rating < ApplicationRecord
   belongs_to :post
 
   before_create do
-    user.increment(:vote_rating, 1)
+    if user.ratings.find_by_post_id(post.id).nil?
+      user.increment(:vote_rating, 1).save
+    else
+      raise 'Record Already Exists'
+    end
   end
 end

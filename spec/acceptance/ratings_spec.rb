@@ -1,5 +1,4 @@
 RSpec.resource 'Ratings' do
-  header 'Host', 'localhost:3000'
   header 'Content-Type', 'application/json'
   let!(:post) { create(:post) }
   before { header 'Authorization', "Bearer #{User.find(post.user_id).api_token}" }

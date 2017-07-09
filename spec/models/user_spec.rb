@@ -18,4 +18,8 @@ RSpec.describe User, type: :model do
   it 'incorrect format' do
     expect(build(:user, email: 'not_format_email_string')).not_to be_valid
   end
+
+  it 'middle rating without posts' do
+    expect(create(:user).middle_rating).to eq(0)
+  end
 end

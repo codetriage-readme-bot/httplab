@@ -13,6 +13,6 @@ class PostPolicy < ApplicationPolicy
   alias_method :create?, :show?
 
   def permitted_attributes
-    [:user_id, :message]
+    [:message]
   end
 end

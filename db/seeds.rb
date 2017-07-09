@@ -6,4 +6,4 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 user = FactoryGirl.create(:user, email: '1@1', password: 'qwerty', password_confirmation: 'qwerty')
-FactoryGirl.create(:rating, user_id: user.id)
+FactoryGirl.create(:post, user_id: user.id)
