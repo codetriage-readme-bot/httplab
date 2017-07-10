@@ -5,8 +5,10 @@ feature = <<~HEREDOC
 HEREDOC
 
 RSpec.feature feature do
-  let!(:post) { create_list(:post, 10) }
-  before { visit root_url }
+  let!(:posts) { create_list(:post, 10) }
+  before do
+    posts.each { |post| create(:rating, user_id: post.user.id, post_id: post.id) }
+  end
 
   scenario = <<~HEREDOC
     Given link to the domain
@@ -15,9 +17,13 @@ RSpec.feature feature do
   HEREDOC
 
   scenario scenario do
-    top_posts = User.all.order('posts_count DESC').limit(5)
+    create(:post, user_id: User.all.last.id)
+    top_users_posts = User.all.order('posts_count DESC').limit(5)
 
-    expect(page).to have_content(top_posts.first.email)
+    visit root_url
+    first_user_page = find('.top_users_posts').find_all('.item').first.text
+
+    expect(first_user_page).to eq(top_users_posts.first.email)
   end
 
   scenario = <<~HEREDOC
@@ -28,10 +34,14 @@ RSpec.feature feature do
   HEREDOC
 
   scenario scenario do
+    create(:rating, user_id: User.all.last.id, post_id: Post.all.first.id)
     top_message_rating = Post.all.order('message_rating DESC').limit(5)
 
-    expect(page).to have_content(top_message_rating.first.user.email)
-    expect(page).to have_content(top_message_rating.first.message)
+    visit root_url
+    first_user_rating_post = find('.top_users_rating_post').find_all('.item').first
+
+    expect(first_user_rating_post.find('.email').text).to eq(top_message_rating.first.user.email)
+    expect(first_user_rating_post.find('.message').text).to eq(top_message_rating.first.message)
   end
 
   scenario = <<~HEREDOC
@@ -42,8 +52,13 @@ RSpec.feature feature do
   HEREDOC
 
   scenario scenario do
-    top_middle_rating = User.all.sort_by(&:middle_rating).reverse.take(5)
+    User.all.drop(1).each { |user| create(:rating, user_id: user.id, post_id: Post.all.first.id) }
+    top_average_rating = User.all.sort_by(&:middle_rating).reverse.take(5)
 
-    expect(page).to have_content(top_middle_rating.first.email)
+    visit root_url
+    first_user_avarage_rating = find('.top_users_average_rating').find_all('.item').first
+
+    expect(User.find(1).middle_rating).to eq(10)
+    expect(first_user_avarage_rating.text).to eq(top_average_rating.first.email)
   end
 end

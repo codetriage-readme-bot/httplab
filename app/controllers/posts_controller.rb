@@ -7,7 +7,7 @@ class PostsController < ApplicationController
   def top_users
     users = User.all
     @top_posts = users.order('posts_count DESC').limit(number)
-    @top_middle_rating = users.sort_by(&:middle_rating).reverse.take(number)
+    @top_average_rating = users.sort_by(&:middle_rating).reverse.take(number)
   end
 
   def number
