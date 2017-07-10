@@ -49,6 +49,9 @@ gem 'graphql', '~> 1.5.14'
 gem 'rack-cors', '~> 0.4.1', require: 'rack/cors'
 # Documentation
 gem 'rspec_api_documentation'
+# Staticstic
+gem 'groupdate'
+gem 'chartkick'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

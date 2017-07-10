@@ -1,10 +1,10 @@
-h1 Top5 Users by posts
+h2 Top5 Users by posts
 .top_users_posts
   - @top_posts.each do |user|
     .item
       = user.email
       hr
-h2 Top5 Users by rating of posts
+h3 Top5 Users by rating of posts
 .top_users_rating_post
   - @top_message_rating.each do |post|
     .item
@@ -14,9 +14,24 @@ h2 Top5 Users by rating of posts
       .message
         = post.message
       hr
-h3 Top5 Users with the highest average rating of their messages
+h4 Top5 Users with the highest average rating of their messages
 .top_users_average_rating
   - @top_average_rating.each do |user|
     .item
       = user.email
       hr
+hr
+h2 Statistics
+.statistics
+  .posts_for_all_time
+    | Posts for all time
+    = area_chart Post.group('date(created_at)').count
+  .posts_for_current_day
+    | Posts for current day
+    = column_chart Post.all.group_by_day(:created_at, last: 1).count
+  .ratings_for_all_time
+    | Ratings for all time
+    = area_chart Rating.group('date(created_at)').count
+  .ratings_for_current_day
+    | Ratings for current day
+    = column_chart Rating.all.group_by_day(:created_at, last: 1, reverse: true).count
