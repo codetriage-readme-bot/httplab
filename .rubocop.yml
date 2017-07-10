@@ -8,3 +8,5 @@ AllCops:
     - script/**
 Documentation:
   Enabled: false
+Style/Encoding:
+  EnforcedStyle: never
