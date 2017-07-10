@@ -14,3 +14,13 @@ Style/FrozenStringLiteralComment:
 # Customize rules
 Metrics/LineLength:
   Max: 160
+Style/ModuleFunction:
+  EnforcedStyle: module_function
+  SupportedStyles:
+    - module_function
+    - extend_self
+Style/Alias:
+  EnforcedStyle: prefer_alias
+  SupportedStyles:
+    - prefer_alias
+    - prefer_alias_method
