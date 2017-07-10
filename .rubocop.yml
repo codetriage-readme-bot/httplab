@@ -27,3 +27,9 @@ Style/Alias:
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     '%w': ()
+Style/ParenthesesAroundCondition:
+  AllowSafeAssignment: true
+Style/AndOr:
+  Description: 'Use &&/|| instead of and/or.'
+  StyleGuide: '#no-and-or-or'
+  Enabled: true
