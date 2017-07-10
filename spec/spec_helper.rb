@@ -101,6 +101,7 @@ RSpec.configure do |config|
   if ENV['RAILS_ENV'] == 'test'
     require 'simplecov'
     SimpleCov.start 'rails'
+    SimpleCov.minimum_coverage 100
     puts 'required simplecov'
   end
 end
