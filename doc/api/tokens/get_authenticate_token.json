@@ -1,0 +1,41 @@
+{
+  "resource": "Tokens",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/tokens",
+  "description": "Get authenticate token",
+  "explanation": "User get token with verified signature",
+  "parameters": [
+    {
+      "name": "auth",
+      "description": "Email and Password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/tokens",
+      "request_body": "{\"auth\":{\"email\":\"sister.dickens@abshirerau.io\",\"password\":\"2395BnDe\"}}",
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NjIyNjgsInN1YiI6MX0.iwkrxU3o-x7iXkRylPddADNbe5fIXyfjdwnn2jXT_g4\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/tokens\" -d '{\"auth\":{\"email\":\"sister.dickens@abshirerau.io\",\"password\":\"2395BnDe\"}}' -X POST \\\n\t-H \"Content-Type: application/json\"",
+      "request_headers_text": "Content-Type: application/json",
+      "request_query_parameters_text": null,
+      "response_headers_text": "Content-Type: application/json; charset=utf-8"
+    }
+  ]
+}
