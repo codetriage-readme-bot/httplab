@@ -20,8 +20,6 @@ class User < ApplicationRecord
   alias_method :authenticate, :valid_password?
 
   def password_match?
-    errors[:password] << 'cannot be blank' if password.blank?
-    errors[:password_confirmation] << 'cannot be blank' if password_confirmation.blank?
     errors[:password_confirmation] << 'does not match' if password != password_confirmation
     password.present? && password == password_confirmation
   end
