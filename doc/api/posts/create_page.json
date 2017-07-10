@@ -36,12 +36,12 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"id\": 1,\n  \"message\": \"something\",\n  \"created_at\": \"2017-07-10T07:44:52.643Z\",\n  \"updated_at\": \"2017-07-10T07:44:52.643Z\",\n  \"user_id\": 1,\n  \"message_rating\": 0\n}",
+      "response_body": "{\n  \"id\": 1,\n  \"message\": \"something\",\n  \"created_at\": \"2017-07-10T08:37:48.110Z\",\n  \"updated_at\": \"2017-07-10T08:37:48.110Z\",\n  \"user_id\": 1,\n  \"message_rating\": 0\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/posts\" -d '{\"message\":\"something\"}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NTkwOTIsInN1YiI6MX0.wO82yUH_tvtki94P6YyzQ6uRDGkPsi3yAskgJCSLspE\"",
+      "curl": "curl \"http://localhost:3000/api/v1/posts\" -d '{\"message\":\"something\"}' -X POST \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NjIyNjgsInN1YiI6MX0.iwkrxU3o-x7iXkRylPddADNbe5fIXyfjdwnn2jXT_g4\"",
       "request_headers_text": "Content-Type: application/json",
       "request_query_parameters_text": null,
       "response_headers_text": "Content-Type: application/json; charset=utf-8"

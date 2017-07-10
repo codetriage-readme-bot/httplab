@@ -3,10 +3,14 @@ AllCops:
     - Rakefile
     - config.ru
   Excludes:
+    - test/**
     - db/**
     - config/**
     - script/**
 Documentation:
   Enabled: false
-Style/Encoding:
-  EnforcedStyle: never
+Style/FrozenStringLiteralComment:
+  Enabled: false
+# Customize rules
+Metrics/LineLength:
+  Max: 160

@@ -67,7 +67,6 @@ RSpec.configure do |config|
   # config.filter_gems_from_backtrace("gem name")
 end
 
-
 Capybara.register_driver :chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
 end
@@ -77,7 +76,6 @@ Capybara.server_host = 'localhost'
 Capybara.server_port = '5050'
 
 Capybara.default_wait_time = 5
-#Capybara.default_driver = :chrome
 Capybara.javascript_driver = :chrome
 
 Capybara::Screenshot.register_driver(:chrome) do |driver, path|

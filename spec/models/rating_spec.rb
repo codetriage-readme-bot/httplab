@@ -14,6 +14,6 @@ RSpec.describe Rating, type: :model do
   it 'Throw error if User already voted specific post message' do
     create(:rating, params)
 
-    expect{ create(:rating, params) }.to raise_error('Record Already Exists')
+    expect { create(:rating, params) }.to raise_error('Record Already Exists')
   end
 end

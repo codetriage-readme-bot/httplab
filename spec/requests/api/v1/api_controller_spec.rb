@@ -12,7 +12,6 @@ class Resource < ApplicationRecord
 end
 
 class ResourcePolicy < ApplicationPolicy
-
   def create?
     user
   end
@@ -48,9 +47,9 @@ RSpec.describe API::V1::ResourcesController do
     m.drop_table :resources
   end
 
-  let(:authenticated_header) {
+  let(:authenticated_header) do
     { 'Authorization' => "Bearer #{create(:user).api_token}" }
-  }
+  end
 
   describe 'POST#create' do
     context 'when request is invalid returns status 422' do

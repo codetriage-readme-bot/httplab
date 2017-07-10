@@ -41,7 +41,7 @@ class User < ApplicationRecord
 
   def middle_rating
     begin
-      posts.group(:id).sum(:message_rating).sum{ |key ,value| value } / posts_count
+      posts.group(:id).sum(:message_rating).sum { |_key, value| value } / posts_count
     rescue ZeroDivisionError
       puts 'User has no posts'
       0

@@ -29,7 +29,7 @@ RSpec.feature feature do
   scenario = <<~HEREDOC
     Given link to the domain
     When visitor visits root page
-    Then he sees 'TOP-5 Users who wrote the messages that received 
+    Then he sees 'TOP-5 Users who wrote the messages that received
     the most votes and the messages themselves'
   HEREDOC
 
@@ -47,7 +47,7 @@ RSpec.feature feature do
   scenario = <<~HEREDOC
     Given link to the domain
     When visitor visits root page
-    Then he sees 'TOP-5 Users with the highest average 
+    Then he sees 'TOP-5 Users with the highest average
     rating of their messages'
   HEREDOC
 

@@ -33,12 +33,12 @@
       "request_content_type": "application/json",
       "response_status": 200,
       "response_status_text": "OK",
-      "response_body": "[\n  {\n    \"id\": 1,\n    \"message\": \"We need to transmit the back-end SDD monitor!\",\n    \"created_at\": \"2017-07-10T07:44:52.528Z\",\n    \"updated_at\": \"2017-07-10T07:44:52.528Z\",\n    \"user_id\": 2,\n    \"message_rating\": 0\n  },\n  {\n    \"id\": 2,\n    \"message\": \"We need to transmit the back-end SDD monitor!\",\n    \"created_at\": \"2017-07-10T07:44:52.537Z\",\n    \"updated_at\": \"2017-07-10T07:44:52.537Z\",\n    \"user_id\": 3,\n    \"message_rating\": 0\n  }\n]",
+      "response_body": "[\n  {\n    \"id\": 1,\n    \"message\": \"Connecting the driver won't do anything, we need to parse the back-end scsi protocol!\",\n    \"created_at\": \"2017-07-10T08:37:47.664Z\",\n    \"updated_at\": \"2017-07-10T08:37:47.664Z\",\n    \"user_id\": 2,\n    \"message_rating\": 0\n  },\n  {\n    \"id\": 2,\n    \"message\": \"Connecting the driver won't do anything, we need to parse the back-end scsi protocol!\",\n    \"created_at\": \"2017-07-10T08:37:47.680Z\",\n    \"updated_at\": \"2017-07-10T08:37:47.680Z\",\n    \"user_id\": 3,\n    \"message_rating\": 0\n  }\n]",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/posts\" -X GET \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NTkwOTIsInN1YiI6MX0.wO82yUH_tvtki94P6YyzQ6uRDGkPsi3yAskgJCSLspE\"",
+      "curl": "curl \"http://localhost:3000/api/v1/posts\" -X GET \\\n\t-H \"Content-Type: application/json\" \\\n\t-H \"Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NjIyNjcsInN1YiI6MX0.pxklcHyniRGq0vh_6zfVuoWr1wyXTH2MXTHdw8PgRhc\"",
       "request_headers_text": "Content-Type: application/json",
       "request_query_parameters_text": null,
       "response_headers_text": "Content-Type: application/json; charset=utf-8"
