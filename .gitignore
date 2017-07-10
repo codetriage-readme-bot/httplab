@@ -24,5 +24,4 @@
 
 .idea
 /coverage/*
-/doc/*
 /spec/examples.txt

@@ -1,0 +1,41 @@
+{
+  "resource": "Tokens",
+  "resource_explanation": null,
+  "http_method": "POST",
+  "route": "/api/v1/tokens",
+  "description": "Get authenticate token",
+  "explanation": "User get token with verified signature",
+  "parameters": [
+    {
+      "name": "auth",
+      "description": "Email and Password"
+    }
+  ],
+  "response_fields": [
+
+  ],
+  "requests": [
+    {
+      "request_method": "POST",
+      "request_path": "/api/v1/tokens",
+      "request_body": "{\"auth\":{\"email\":\"omer@hickle.biz\",\"password\":\"QtReYfUaH4NgY\"}}",
+      "request_headers": {
+        "Content-Type": "application/json"
+      },
+      "request_query_parameters": {
+      },
+      "request_content_type": "application/json",
+      "response_status": 201,
+      "response_status_text": "Created",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NTkwOTIsInN1YiI6MX0.wO82yUH_tvtki94P6YyzQ6uRDGkPsi3yAskgJCSLspE\"\n}",
+      "response_headers": {
+        "Content-Type": "application/json; charset=utf-8"
+      },
+      "response_content_type": "application/json; charset=utf-8",
+      "curl": "curl \"http://localhost:3000/api/v1/tokens\" -d '{\"auth\":{\"email\":\"omer@hickle.biz\",\"password\":\"QtReYfUaH4NgY\"}}' -X POST \\\n\t-H \"Content-Type: application/json\"",
+      "request_headers_text": "Content-Type: application/json",
+      "request_query_parameters_text": null,
+      "response_headers_text": "Content-Type: application/json; charset=utf-8"
+    }
+  ]
+}
