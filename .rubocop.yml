@@ -31,3 +31,5 @@ Style/ParenthesesAroundCondition:
   AllowSafeAssignment: true
 Style/FileName:
   Enabled: false
+Style/SymbolArray:
+  EnforcedStyle: brackets

@@ -19,7 +19,11 @@ RSpec.describe User, type: :model do
     expect(build(:user, email: 'not_format_email_string')).not_to be_valid
   end
 
+  it 'correct format' do
+    expect(build(:user, email: 'this correct format@email_string')).to be_valid
+  end
+
   it 'middle rating without posts' do
-    expect(create(:user).middle_rating).to eq(0)
+    expect(create(:user).avarage_rating).to eq(0)
   end
 end

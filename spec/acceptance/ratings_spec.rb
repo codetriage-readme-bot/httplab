@@ -25,7 +25,7 @@ RSpec.resource 'Ratings' do
       expect(JSON.parse(response_body)['post_id']).to eq(post.id)
       expect(JSON.parse(response_body)['user_id']).to eq(post.user_id)
       expect(JSON.parse(response_body)['vote']).to eq(true)
-      expect(Rating.find_by_post_id(post_id).vote).to eq(true)
+      expect(Rating.find_by(post_id: post_id).vote).to eq(true)
     end
   end
 end

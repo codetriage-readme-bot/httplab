@@ -13,10 +13,8 @@ class User < ApplicationRecord
     Knock::AuthToken.new(payload: { sub: id }).token
   end
 
-  def middle_rating
+  def avarage_rating
+    return 0 if posts_count.zero?
     posts.group(:id).sum(:message_rating).sum { |_key, value| value } / posts_count
-  rescue ZeroDivisionError
-    puts 'User has no posts'
-    0
   end
 end

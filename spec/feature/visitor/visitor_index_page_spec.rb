@@ -51,12 +51,12 @@ RSpec.feature feature do
 
   scenario scenario do
     User.all.drop(1).each { |user| create(:rating, user_id: user.id, post_id: Post.all.first.id) }
-    top_average_rating = User.all.sort_by(&:middle_rating).reverse.take(5)
+    top_average_rating = User.all.sort_by(&:avarage_rating).reverse.take(5)
 
     visit root_url
     first_user_avarage_rating = find('.top_users_average_rating').find_all('.item').first
 
-    expect(User.find(1).middle_rating).to eq(10)
+    expect(User.find(1).avarage_rating).to eq(10)
     expect(first_user_avarage_rating.text).to eq(top_average_rating.first.email)
   end
 end

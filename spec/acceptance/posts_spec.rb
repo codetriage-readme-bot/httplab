@@ -20,11 +20,11 @@ RSpec.resource 'Posts' do
     let(:message) { 'something' }
     let(:raw_post) { params.to_json }
 
-    example_request 'Create page' do
-      explanation 'Create the new page'
+    example_request 'Create post' do
+      explanation 'Create the new post'
 
       expect(status).to eq 201
-      expect(Post.find_by_user_id(user.id).message).to eq('something')
+      expect(Post.find_by(user_id: user.id).message).to eq('something')
     end
   end
 end
