@@ -7,8 +7,6 @@ class User < ApplicationRecord
   has_many :posts
   has_many :ratings
 
-  # https://davidcel.is/posts/stop-validating-email-addresses-with-regex/
-  validates_format_of :email, with: /\A.*@.*\z/
   validates_presence_of :password, if: :password_required?
   validate :password_match?, if: :password_required?
   alias_method :authenticate, :valid_password?
