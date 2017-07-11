@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20170709133933) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "user_id"
-    t.integer "message_rating"
+    t.integer "message_rating", default: 0, null: false
     t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
@@ -35,8 +35,8 @@ ActiveRecord::Schema.define(version: 20170709133933) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.integer "vote_rating"
-    t.integer "posts_count"
+    t.integer "vote_rating", default: 0, null: false
+    t.integer "posts_count", default: 0, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "email", default: "", null: false

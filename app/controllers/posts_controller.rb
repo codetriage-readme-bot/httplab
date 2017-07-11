@@ -4,6 +4,8 @@ class PostsController < ApplicationController
     @top_message_rating = Post.all.order('message_rating DESC').limit(number)
   end
 
+  private
+  
   def top_users
     users = User.all
     @top_posts = users.order('posts_count DESC').limit(number)

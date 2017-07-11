@@ -6,12 +6,6 @@ class User < ApplicationRecord
 
   has_many :posts
   has_many :ratings
-  after_initialize :init
-
-  def init
-    self.vote_rating ||= 0
-    self.posts_count ||= 0
-  end
 
   # https://davidcel.is/posts/stop-validating-email-addresses-with-regex/
   validates_format_of :email, with: /\A.*@.*\z/

@@ -102,6 +102,7 @@ RSpec.configure do |config|
     require 'simplecov'
     SimpleCov.start 'rails'
     SimpleCov.minimum_coverage 100
+    SimpleCov.refuse_coverage_drop
     puts 'required simplecov'
   end
 end
