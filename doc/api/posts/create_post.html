@@ -109,10 +109,10 @@ table th, table td {
       <h1>Posts API</h1>
 
       <div class="article">
-        <h2>Create page</h2>
+        <h2>Create post</h2>
         <h3>POST /api/v1/posts</h3>
           <p class="explanation">
-            Create the new page
+            Create the new post
           </p>
 
           <h3>Parameters</h3>
@@ -178,7 +178,7 @@ table th, table td {
             <h4>cURL</h4>
             <pre class="request curl">curl &quot;http://localhost:3000/api/v1/posts&quot; -d &#39;{&quot;message&quot;:&quot;something&quot;}&#39; -X POST \
 	-H &quot;Content-Type: application/json&quot; \
-	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NjIyNjgsInN1YiI6MX0.iwkrxU3o-x7iXkRylPddADNbe5fIXyfjdwnn2jXT_g4&quot;</pre>
+	-H &quot;Authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk4NDM4MDAsInN1YiI6MX0.NNEpNFcRNl4eq5oAwGzcBbeAPcLr1PukSeze3ad5VsE&quot;</pre>
 
             <h3>Response</h3>
               <h4>Headers</h4>
@@ -189,8 +189,8 @@ table th, table td {
               <pre class="response body">{
   &quot;id&quot;: 1,
   &quot;message&quot;: &quot;something&quot;,
-  &quot;created_at&quot;: &quot;2017-07-10T08:37:48.110Z&quot;,
-  &quot;updated_at&quot;: &quot;2017-07-10T08:37:48.110Z&quot;,
+  &quot;created_at&quot;: &quot;2017-07-11T07:16:40.340Z&quot;,
+  &quot;updated_at&quot;: &quot;2017-07-11T07:16:40.340Z&quot;,
   &quot;user_id&quot;: 1,
   &quot;message_rating&quot;: 0
 }</pre>

@@ -12,8 +12,8 @@
           "method": "get"
         },
         {
-          "description": "Create page",
-          "link": "posts/create_page.json",
+          "description": "Create post",
+          "link": "posts/create_post.json",
           "groups": "all",
           "route": "/api/v1/posts",
           "method": "post"

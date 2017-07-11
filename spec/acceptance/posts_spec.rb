@@ -24,7 +24,9 @@ RSpec.resource 'Posts' do
       explanation 'Create the new post'
 
       expect(status).to eq 201
-      expect(Post.find_by(user_id: user.id).message).to eq('something')
+      new_post = Post.find_by(user_id: user.id)
+      expect(new_post.message).to eq('something')
+      expect(change(new_post, :message_rating).from(0).to(1)).to be_truthy
     end
   end
 end

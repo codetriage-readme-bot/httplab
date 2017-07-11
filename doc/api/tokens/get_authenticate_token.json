@@ -18,7 +18,7 @@
     {
       "request_method": "POST",
       "request_path": "/api/v1/tokens",
-      "request_body": "{\"auth\":{\"email\":\"sister.dickens@abshirerau.io\",\"password\":\"2395BnDe\"}}",
+      "request_body": "{\"auth\":{\"email\":\"lavern.spencer@turner.name\",\"password\":\"E31wPt5d\"}}",
       "request_headers": {
         "Content-Type": "application/json"
       },
@@ -27,12 +27,12 @@
       "request_content_type": "application/json",
       "response_status": 201,
       "response_status_text": "Created",
-      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk3NjIyNjgsInN1YiI6MX0.iwkrxU3o-x7iXkRylPddADNbe5fIXyfjdwnn2jXT_g4\"\n}",
+      "response_body": "{\n  \"jwt\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE0OTk4NDM4MDAsInN1YiI6MX0.NNEpNFcRNl4eq5oAwGzcBbeAPcLr1PukSeze3ad5VsE\"\n}",
       "response_headers": {
         "Content-Type": "application/json; charset=utf-8"
       },
       "response_content_type": "application/json; charset=utf-8",
-      "curl": "curl \"http://localhost:3000/api/v1/tokens\" -d '{\"auth\":{\"email\":\"sister.dickens@abshirerau.io\",\"password\":\"2395BnDe\"}}' -X POST \\\n\t-H \"Content-Type: application/json\"",
+      "curl": "curl \"http://localhost:3000/api/v1/tokens\" -d '{\"auth\":{\"email\":\"lavern.spencer@turner.name\",\"password\":\"E31wPt5d\"}}' -X POST \\\n\t-H \"Content-Type: application/json\"",
       "request_headers_text": "Content-Type: application/json",
       "request_query_parameters_text": null,
       "response_headers_text": "Content-Type: application/json; charset=utf-8"
