@@ -7,23 +7,7 @@ class User < ApplicationRecord
   has_many :posts
   has_many :ratings
 
-  validates_presence_of :password, if: :password_required?
-  validate :password_match?, if: :password_required?
   alias_method :authenticate, :valid_password?
-
-  def password_match?
-    errors[:password_confirmation] << 'does not match' if password != password_confirmation
-    password.present? && password == password_confirmation
-  end
-
-  def password_required?
-    # Password is required if it is being set, but not for new records
-    if persisted?
-      !password.nil? || !password_confirmation.nil?
-    else
-      true
-    end
-  end
 
   def api_token
     Knock::AuthToken.new(payload: { sub: id }).token
