@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/Mifrill/httplab.svg?branch=master)](https://travis-ci.org/Mifrill/httplab)
+[![Quality](http://img.shields.io/codeclimate/github/Mifrill/httplab.svg)](https://codeclimate.com/github/Mifrill/httplab)
+[![codecov](https://codecov.io/gh/Mifrill/httplab/branch/master/graph/badge.svg)](https://codecov.io/gh/Mifrill/httplab)
+[![Inline docs](http://inch-ci.org/github/Mifrill/httplab.svg?branch=master)](http://inch-ci.org/github/Mifrill/httplab)
+
 # Mobile API
     
     Documentation: 
