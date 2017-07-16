@@ -10,10 +10,8 @@ install:
   - cd bcrypt-ruby
   - gem build bcrypt.gemspec
   - gem install gem-compiler
-  - gem compile bcrypt-3.1.10.gem
-  - gem install bcrypt-3.1.10-x64-mingw32.gem --local
-  - gem install bcrypt --platform=ruby
-  - gem install bcrypt-ruby
+  - gem compile bcrypt-3.1.11.gem
+  - gem install bcrypt-3.1.11-x64-mingw32.gem --local
 build: off
 
 test_script:
