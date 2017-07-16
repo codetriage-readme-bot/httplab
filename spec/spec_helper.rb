@@ -105,12 +105,10 @@ RSpec.configure do |config|
     puts 'CodeCoverage Enabled'
     if ENV['CI']
       require 'codeclimate-test-reporter'
-      require 'coveralls'
       require 'codecov'
       SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-          Coveralls::SimpleCov::Formatter,
           SimpleCov::Formatter::HTMLFormatter,
-          CodeClimate::TestReporter::Formatter,
+          CodeClimate::TestReporter::Format,
           SimpleCov::Formatter::Codecov
       ]
       SimpleCov.start 'rails'
