@@ -14,12 +14,6 @@ install:
   - gem install ./bcrypt-3.1.11-x86-mingw32.gem
   - cd ..
 build: off
-platform: Any CPU
-init:
-- ps: >-
-    Set-Content "c:\program files\postgresql\9.6\data\pg_hba.conf" "host    all             all             ::1/128            trust"
-    Add-Content "c:\program files\postgresql\9.6\data\pg_hba.conf" "host    all             all             127.0.0.1/32            trust"
-    $env:Path += ";c:\program files\postgresql\9.6\bin"
 services: postgresql
 build_script:
 - ps: >-
