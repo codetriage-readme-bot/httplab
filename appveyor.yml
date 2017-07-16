@@ -5,9 +5,9 @@ environment:
     - RUBY_VERSION: 24
 install:
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
-  - bundle install
-  - gem update --system --no-document
-  - gem install bundler --no-document
+  - gem uninstall bcrypt-ruby
+  - gem uninstall bcrypt
+  - gem install bcrypt --platform=ruby
   - bundle install
 build: off
 
