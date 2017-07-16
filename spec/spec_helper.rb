@@ -108,7 +108,6 @@ RSpec.configure do |config|
       require 'codecov'
       SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
           SimpleCov::Formatter::HTMLFormatter,
-          CodeClimate::TestReporter::Format,
           SimpleCov::Formatter::Codecov
       ]
       SimpleCov.start 'rails'

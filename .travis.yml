@@ -11,9 +11,6 @@ cache:
   bundler: true
 services:
   - postgresql
-addons:
-  code_climate:
-    repo_token: b7b7d9e4c5aa6b0913fd634637e4fa0e0009b4830903f950e851468343a7cb9f
   apt:
     packages:
     - postgresql-9.6
@@ -26,3 +23,4 @@ before_script:
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - RAILS_ENV=test bundle exec rspec
+  - CODECLIMATE_REPO_TOKEN=b7b7d9e4c5aa6b0913fd634637e4fa0e0009b4830903f950e851468343a7cb9f bundle exec codeclimate-test-reporter
