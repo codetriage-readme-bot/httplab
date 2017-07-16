@@ -104,16 +104,16 @@ RSpec.configure do |config|
     SimpleCov.refuse_coverage_drop
     puts 'CodeCoverage Enabled'
     if ENV['CI']
-      require 'codecov'
       require 'codeclimate-test-reporter'
-      SimpleCov.start 'rails' do
-        formatter SimpleCov::Formatter::MultiFormatter[
-                      SimpleCov::Formatter::HTMLFormatter,
-                      CodeClimate::TestReporter::Formatter,
-                      SimpleCov::Formatter::Codecov
-                  ]
-        add_filter 'some/path'
-      end
+      require 'coveralls'
+      require 'codecov'
+      SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
+          Coveralls::SimpleCov::Formatter,
+          SimpleCov::Formatter::HTMLFormatter,
+          CodeClimate::TestReporter::Formatter,
+          SimpleCov::Formatter::Codecov
+      ]
+      SimpleCov.start 'rails'
     else
       SimpleCov.start 'rails' do
         add_filter 'some/path'
