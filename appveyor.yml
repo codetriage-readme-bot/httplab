@@ -9,8 +9,7 @@ install:
   - gem update --system --no-document
   - gem install bundler --no-document
   - bundle install
-  - gem install bcrypt --platform=ruby
 build: off
 
 test_script:
-  - bundle exec rspec
+  - rspec
