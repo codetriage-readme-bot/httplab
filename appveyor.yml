@@ -1,10 +1,15 @@
 version: "{build}"
 
+environment:
+  matrix:
+    - RUBY_VERSION: 24
 install:
-  - set PATH=C:\Ruby24\bin;%PATH%
+  - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
+  - bundle install
   - gem update --system --no-document
   - gem install bundler --no-document
   - bundle install
+  - gem install bcrypt --platform=ruby
 build: off
 
 test_script:
