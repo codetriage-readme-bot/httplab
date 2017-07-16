@@ -106,11 +106,8 @@ RSpec.configure do |config|
     if ENV['CI']
       require 'codeclimate-test-reporter'
       require 'codecov'
-      SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter[
-          SimpleCov::Formatter::HTMLFormatter,
-          SimpleCov::Formatter::Codecov
-      ]
       SimpleCov.start 'rails'
+      SimpleCov.formatter = SimpleCov::Formatter::Codecov
     else
       SimpleCov.start 'rails' do
         add_filter 'some/path'
