@@ -104,5 +104,7 @@ RSpec.configure do |config|
     SimpleCov.minimum_coverage 100
     SimpleCov.refuse_coverage_drop
     puts 'required simplecov'
+    require 'codecov'
+    SimpleCov.formatter = SimpleCov::Formatter::Codecov
   end
 end

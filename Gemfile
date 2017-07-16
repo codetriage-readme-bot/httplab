@@ -66,6 +66,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.5.3'
   # Generate code coverate reports
   gem 'simplecov', '~> 0.13.0', require: false
+  gem 'codecov', require: false, group: :test
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
