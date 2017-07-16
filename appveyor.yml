@@ -16,5 +16,6 @@ install:
 build: off
 services: postgresql
 test_script:
-  - RAILS_ENV=test rails db:setup
+  - set RAILS_ENV=test 
+  - rails db:setup
   - bundle exec rspec
