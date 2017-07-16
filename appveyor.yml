@@ -15,9 +15,6 @@ install:
   - cd ..
 build: off
 services: postgresql
-build_script:
-- ps: >-
-    psql -U postgres -c "CREATE ROLE mifrill LOGIN SUPERUSER CREATEDB CREATEROLE;"
 test_script:
   - bin/rails db:setup
   - bin/rails db:migrate RAILS_ENV=test
