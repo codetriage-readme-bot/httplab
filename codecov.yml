@@ -24,5 +24,4 @@ comment:
   layout: "reach, diff, flags, files, footer"
   behavior: default
   require_changes: no
-codecov:
-  token: f3ac2fb5-d1e0-4377-a920-1049da798c46  
+token: f3ac2fb5-d1e0-4377-a920-1049da798c46  
