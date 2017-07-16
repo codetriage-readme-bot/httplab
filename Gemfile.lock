@@ -73,6 +73,8 @@ GEM
     chromedriver-helper (1.1.0)
       archive-zip (~> 0.7.0)
       nokogiri (~> 1.6)
+    codeclimate-test-reporter (1.0.8)
+      simplecov (<= 0.13)
     codecov (0.1.10)
       json
       simplecov
@@ -321,7 +323,8 @@ DEPENDENCIES
   capybara-screenshot (~> 1.0.16)
   chartkick (~> 2.2.4)
   chromedriver-helper (~> 1.1.0)
-  codecov
+  codeclimate-test-reporter
+  codecov (~> 0.1.10)
   coffee-rails (~> 4.2.2)
   database_cleaner (~> 1.5.3)
   devise (~> 4.3.0)
