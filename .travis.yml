@@ -12,6 +12,8 @@ cache:
 services:
   - postgresql
 addons:
+  code_climate:
+    repo_token: 0074164e07428c779408c7068be1e6f73b0eb30c2e73773622015822ac084d4e
   apt:
     packages:
     - postgresql-9.6
@@ -24,6 +26,3 @@ before_script:
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - RAILS_ENV=test bundle exec rspec
-addons:
-  code_climate:
-    repo_token: 0074164e07428c779408c7068be1e6f73b0eb30c2e73773622015822ac084d4e
