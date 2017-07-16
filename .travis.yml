@@ -13,7 +13,7 @@ services:
   - postgresql
 addons:
   code_climate:
-    repo_token: 0074164e07428c779408c7068be1e6f73b0eb30c2e73773622015822ac084d4e
+    repo_token: b7b7d9e4c5aa6b0913fd634637e4fa0e0009b4830903f950e851468343a7cb9f
   apt:
     packages:
     - postgresql-9.6
