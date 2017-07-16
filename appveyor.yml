@@ -7,7 +7,7 @@ install:
   - set PATH=C:\Ruby%RUBY_VERSION%\bin;%PATH%
   - bundle install
   - gem install bcrypt --platform=ruby
-  - gem bcrypt-ruby
+  - gem install bcrypt-ruby
 build: off
 
 test_script:
