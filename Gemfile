@@ -10,7 +10,7 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.2'
 # Use PostgreSQL as the database for Active Record
-gem 'pg', '~> 0.20.0'
+gem 'pg', '~> 0.21.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.9.1'
 # Use SCSS for stylesheets
@@ -55,14 +55,14 @@ group :development, :test do
   # Screenshot all failures
   gem 'capybara-screenshot', '~> 1.0.16'
   # Fake values generator
-  gem 'faker', '~> 1.7.3'
+  gem 'faker', '~> 1.8.4'
   # Pretty printed test output
   gem 'shoulda-matchers', '~> 3.1.2'
   gem 'turn', '~> 0.9.6', require: false
   # gem 'rspec-context-private'
   gem 'rails-controller-testing', '~> 1.0.2'
   # Run tests with clean database
-  gem 'database_cleaner', '~> 1.5.3'
+  gem 'database_cleaner', '~> 1.6.1'
   # Generate code coverate reports
   gem 'simplecov', '~> 0.13.0', require: false
   gem 'codecov', '~> 0.1.10', require: false
