@@ -64,9 +64,9 @@ group :development, :test do
   # Run tests with clean database
   gem 'database_cleaner', '~> 1.6.1'
   # Generate code coverate reports
-  gem 'simplecov', '~> 0.13.0', require: false
-  gem 'codecov', '~> 0.1.10', require: false
   gem 'codeclimate-test-reporter', '~> 1.0.8', require: false
+  gem 'codecov', '~> 0.1.10', require: false
+  gem 'simplecov', '~> 0.13.0', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
