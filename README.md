@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/Mifrill/httplab.svg?branch=master)](https://travis-ci.org/Mifrill/httplab)
+[![CircleCI](https://circleci.com/gh/Mifrill/httplab.svg?style=svg)](https://circleci.com/gh/Mifrill/httplab)
 [![Build status](https://ci.appveyor.com/api/projects/status/twukdnvwdj33mspb?svg=true)](https://ci.appveyor.com/project/Mifrill/httplab)
 [![Quality](http://img.shields.io/codeclimate/github/Mifrill/httplab.svg)](https://codeclimate.com/github/Mifrill/httplab)
 [![Coverage Status](https://img.shields.io/codeclimate/coverage/github/Mifrill/httplab.svg)](https://codeclimate.com/github/mifrill/httplab)

@@ -17,6 +17,8 @@ addons:
     - postgresql-9.6
     - postgresql-contrib-9.6
   postgresql: "9.6"
+  code_climate:
+    repo_token: b7b7d9e4c5aa6b0913fd634637e4fa0e0009b4830903f950e851468343a7cb9f
 before_script:
   - sudo service postgresql start
   - cp config/database.yml.travis config/database.yml
@@ -24,4 +26,5 @@ before_script:
 script:
   - RAILS_ENV=test bundle exec rake db:migrate --trace
   - RAILS_ENV=test bundle exec rspec
-  - CODECLIMATE_REPO_TOKEN=b7b7d9e4c5aa6b0913fd634637e4fa0e0009b4830903f950e851468343a7cb9f bundle exec codeclimate-test-reporter
+after_success:
+  - bundle exec codeclimate-test-reporter
