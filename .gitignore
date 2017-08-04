@@ -25,3 +25,4 @@
 .idea
 /coverage/*
 /spec/examples.txt
+doc

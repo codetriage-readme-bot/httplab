@@ -13,6 +13,10 @@
     Documentation: 
         ./doc/*
         ./spec/feature/*
+        
+# Documentation
+    
+    bin/rails docs:generate
 
 
 ## License
