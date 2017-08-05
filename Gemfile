@@ -65,6 +65,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.6.1'
   # Generate code coverate reports
   gem 'codeclimate-test-reporter', '~> 1.0.8', require: false
+  gem 'coveralls', require: false
   gem 'codecov', '~> 0.1.10', require: false
   gem 'simplecov', '~> 0.13.0', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
