@@ -8,7 +8,7 @@ git_source(:github) do |repo_name|
 end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.1.2'
+gem 'rails', '~> 5.1.3'
 # Use PostgreSQL as the database for Active Record
 gem 'pg', '~> 0.21.0'
 # Use Puma as the app server
@@ -47,13 +47,13 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 group :development, :test do
   gem 'factory_girl_rails', '~> 4.8.0'
-  gem 'rspec-rails', '~> 3.6.0'
+  gem 'rspec-rails', '~> 3.6.1'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '~> 2.14.4'
   gem 'chromedriver-helper', '~> 1.1.0'
   gem 'selenium-webdriver', '~> 3.4.4'
   # Screenshot all failures
-  gem 'capybara-screenshot', '~> 1.0.16'
+  gem 'capybara-screenshot', '~> 1.0.17'
   # Fake values generator
   gem 'faker', '~> 1.8.4'
   # Pretty printed test output
@@ -65,7 +65,7 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.6.1'
   # Generate code coverate reports
   gem 'codeclimate-test-reporter', '~> 1.0.8', require: false
-  gem 'coveralls', require: false
+  gem 'coveralls', '~> 0.7.2', require: false
   gem 'codecov', '~> 0.1.10', require: false
   gem 'simplecov', '~> 0.13.0', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
