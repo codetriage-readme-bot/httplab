@@ -10,6 +10,7 @@
 [![Dependency Status](https://gemnasium.com/badges/github.com/Mifrill/httplab.svg)](https://gemnasium.com/github.com/Mifrill/httplab)
 [![security](https://hakiri.io/github/Mifrill/httplab/master.svg)](https://hakiri.io/github/Mifrill/httplab/master)
 [![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2FMifrill%2Fhttplab.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2FMifrill%2Fhttplab?ref=badge_shield)
+[![Code Triagers Badge](https://www.codetriage.com/mifrill/httplab/badges/users.svg)](https://www.codetriage.com/mifrill/httplab)
 
 # Mobile API
     
