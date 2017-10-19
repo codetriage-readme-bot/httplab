@@ -13,6 +13,8 @@
 [![Code Triagers Badge](https://www.codetriage.com/mifrill/httplab/badges/users.svg)](https://www.codetriage.com/mifrill/httplab)
 
 # Mobile API
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/Mifrill/httplab.svg)](https://greenkeeper.io/)
     
     Documentation: 
         ./doc/*
