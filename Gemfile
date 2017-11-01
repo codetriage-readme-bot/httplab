@@ -65,11 +65,20 @@ group :development, :test do
   gem 'database_cleaner', '~> 1.6.1'
   # Generate code coverate reports
   gem 'codeclimate-test-reporter', '~> 1.0.8', require: false
-  gem 'coveralls', '~> 0.7.2', require: false
   gem 'codecov', '~> 0.1.10', require: false
+  gem 'coveralls', '~> 0.7.2', require: false
   gem 'simplecov', '~> 0.13.0', require: false
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'guard'
+  gem 'guard-bundler', require: false
+  gem 'guard-migrate'
+  gem 'guard-rails'
+  gem 'guard-rspec', require: false
+  gem 'guard-rubocop'
+  gem 'rubocop', require: false
+  gem 'rubocop-rspec'
 end
 
 group :development do
