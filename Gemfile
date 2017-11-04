@@ -49,11 +49,11 @@ group :development, :test do
   gem 'factory_girl_rails', '~> 4.8.0'
   gem 'rspec-rails', '~> 3.6.1'
   # Adds support for Capybara system testing and selenium driver
-  gem 'capybara', '~> 2.15.1'
+  gem 'capybara', '~> 2.15.4'
   gem 'chromedriver-helper', '~> 1.1.0'
   gem 'selenium-webdriver', '~> 3.5.0'
   # Screenshot all failures
-  gem 'capybara-screenshot', '~> 1.0.17'
+  gem 'capybara-screenshot', '~> 1.0.18'
   # Fake values generator
   gem 'faker', '~> 1.8.4'
   # Pretty printed test output
