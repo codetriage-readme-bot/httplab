@@ -57,7 +57,7 @@ GEM
     binding_of_caller (0.7.3)
       debug_inspector (>= 0.0.1)
     builder (3.2.3)
-    byebug (9.1.0)
+    byebug (10.0.0)
     capybara (2.15.4)
       addressable
       mini_mime (>= 0.1.3)
